@@ -1,0 +1,45 @@
+name: Deploy Marp Slides to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Change this if your default branch has a different name
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: |
+          npm install -g @marp-team/marp-cli
+          
+      - name: Build slides
+        run: |
+          mkdir -p public
+          marp --html --output public slides/*.md
+          
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v3
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: './public'
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
