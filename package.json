@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Marp slide decks",
   "scripts": {
-    "build": "marp --html --output public slides/*.md",
+    "build": "marp --input-dir ./slides --output dist/",
     "preview": "marp -s slides/"
   },
   "dependencies": {
