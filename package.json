@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "description": "Marp slide decks",
   "scripts": {
-    "build": "marp --input-dir ./slides --output dist/",
-    "preview": "marp -s slides/"
+    "build": "marp --input-dir ./slides --output dist/ && node scripts/generate-index.js",
+    "preview": "marp -s slides/",
+    "generate-index": "node scripts/generate-index.js"
   },
   "dependencies": {
     "@marp-team/marp-cli": "^3.4.0"
+  },
+  "packageManager": "pnpm@10.6.1",
+  "engines": {
+    "node": ">=16",
+    "pnpm": ">=8"
   }
 }

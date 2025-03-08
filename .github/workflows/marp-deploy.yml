@@ -3,8 +3,8 @@ name: Deploy Marp Slides to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change this if your default branch has a different name
-  workflow_dispatch:  # Allows manual triggering
+      - main
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '22'
           
       - name: Install dependencies
         run: |
