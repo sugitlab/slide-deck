@@ -18,7 +18,7 @@ const slideFiles = fs.readdirSync(slidesDir)
     const filePath = path.join(slidesDir, file);
     const content = fs.readFileSync(filePath, 'utf-8');
     const stats = fs.statSync(filePath);
-    const createdDate = stats.birthtime;
+    const createdDate = stats.birthtime.toLocaleDateString('en-GB');
     
     // Try to extract title from markdown frontmatter or first # heading
     let title = file.replace('.md', '');
@@ -60,7 +60,7 @@ const htmlContent = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Slide Deck Gallery</title>
+  <title>Slide Decks by sugit.</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -135,20 +135,23 @@ const htmlContent = `<!DOCTYPE html>
   </style>
 </head>
 <body>
-  <h1>Slide Deck Gallery</h1>
+  <a href="https://github.com/sugitlab" style="position: absolute; top: 10px; left: 10px;">
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width: 32px; height: 32px;">
+  </a>
+  <h1>Slide Deck by sugit.</h1>
   <div class="gallery">
     ${slideFiles.map(slide => `
     <a href="./${slide.htmlFile}" class="card">
       <img src="${slide.coverImage}" alt="Cover for ${slide.title}" class="card-image">
       <div class="card-content">
         <h2 class="card-title">${slide.title}</h2>
-        <div class="card-date">Created: ${slide.createdDate.toLocaleDateString()}</div>
-        <div class="card-filename">${slide.mdFile}</div>
+        <div class="card-date">Created: ${slide.createdDate.toLocaleDateString('en-GB')}</div>
+        <div class="card-filename">${slide.mdFile.replace('.md', '')}</div>
       </div>
     </a>`).join('')}
   </div>
   <footer>
-    <p><small>Generated at: ${new Date().toLocaleString()}</small></p>
+    <p><small>Updated at: ${new Date().toLocaleString('en-GB')}</small></p>
   </footer>
 </body>
 </html>`;
