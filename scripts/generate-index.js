@@ -17,6 +17,8 @@ const slideFiles = fs.readdirSync(slidesDir)
   .map(file => {
     const filePath = path.join(slidesDir, file);
     const content = fs.readFileSync(filePath, 'utf-8');
+    const stats = fs.statSync(filePath);
+    const createdDate = stats.birthtime;
     
     // Try to extract title from markdown frontmatter or first # heading
     let title = file.replace('.md', '');
@@ -25,14 +27,32 @@ const slideFiles = fs.readdirSync(slidesDir)
       title = titleMatch[1].trim();
     }
     
+    // Try to extract cover image from markdown content
+    // Look for image syntax in markdown: ![alt](url)
+    let coverImage = null;
+    const imageMatch = content.match(/!\[.*?\]\((.+?)\)/);
+    if (imageMatch) {
+      coverImage = imageMatch[1];
+    }
+
+    // If no image found in content, use a default placeholder
+    if (!coverImage) {
+      coverImage = 'https://via.placeholder.com/300x200?text=Slide+Deck';
+    }
+    
     const htmlFilename = file.replace('.md', '.html');
     
     return {
       title,
       mdFile: file,
-      htmlFile: htmlFilename
+      htmlFile: htmlFilename,
+      createdDate,
+      coverImage
     };
   });
+
+// Sort slides by created date (newest first)
+slideFiles.sort((a, b) => b.createdDate - a.createdDate);
 
 // Create HTML content
 const htmlContent = `<!DOCTYPE html>
@@ -40,11 +60,11 @@ const htmlContent = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Slide Deck Index</title>
+  <title>Slide Deck Gallery</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      max-width: 800px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 2rem;
       line-height: 1.6;
@@ -52,36 +72,81 @@ const htmlContent = `<!DOCTYPE html>
     h1 {
       border-bottom: 2px solid #eaecef;
       padding-bottom: 0.3em;
+      text-align: center;
+      margin-bottom: 2rem;
     }
-    ul {
-      padding-left: 2rem;
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
     }
-    li {
+    @media (min-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .card {
+      border: 1px solid #eaecef;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    .card-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1.5rem;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      margin: 0 0 0.5rem;
+    }
+    .card-date {
+      color: #586069;
+      font-size: 0.85rem;
       margin-bottom: 0.5rem;
     }
+    .card-filename {
+      color: #586069;
+      font-size: 0.8rem;
+      margin-top: 1rem;
+    }
     a {
-      color: #0366d6;
+      color: inherit;
       text-decoration: none;
     }
-    a:hover {
-      text-decoration: underline;
-    }
-    .description {
+    footer {
+      margin-top: 3rem;
+      text-align: center;
       color: #586069;
-      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <h1>Slide Deck Index</h1>
-  <p>Select a slide deck to view:</p>
-  <ul>
+  <h1>Slide Deck Gallery</h1>
+  <div class="gallery">
     ${slideFiles.map(slide => `
-    <li>
-      <a href="./${slide.htmlFile}">${slide.title}</a>
-      <span class="description">(${slide.mdFile})</span>
-    </li>`).join('')}
-  </ul>
+    <a href="./${slide.htmlFile}" class="card">
+      <img src="${slide.coverImage}" alt="Cover for ${slide.title}" class="card-image">
+      <div class="card-content">
+        <h2 class="card-title">${slide.title}</h2>
+        <div class="card-date">Created: ${slide.createdDate.toLocaleDateString()}</div>
+        <div class="card-filename">${slide.mdFile}</div>
+      </div>
+    </a>`).join('')}
+  </div>
   <footer>
     <p><small>Generated at: ${new Date().toLocaleString()}</small></p>
   </footer>
@@ -91,4 +156,4 @@ const htmlContent = `<!DOCTYPE html>
 // Write the index.html file
 fs.writeFileSync(outputPath, htmlContent);
 
-console.log(`Index file generated at ${outputPath}`);
+console.log(`Gallery index file generated at ${outputPath}`);
