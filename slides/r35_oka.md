@@ -1,5 +1,6 @@
 ---
 marp: true
+favicon: 'https://avatars.githubusercontent.com/u/26006414'
 ---
 
 # index

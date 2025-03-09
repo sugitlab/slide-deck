@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Marp slide decks",
   "scripts": {
-    "build": "marp --input-dir ./slides --output dist/ && node scripts/generate-index.js",
+    "build": "marp --input-dir ./slides --output dist/ && node scripts/generate-index.js && node scripts/add-favicon.js",
     "preview": "marp -s slides/",
     "generate-index": "node scripts/generate-index.js"
   },
