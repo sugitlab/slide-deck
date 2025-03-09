@@ -51,8 +51,8 @@ const slideFiles = fs.readdirSync(slidesDir)
     };
   });
 
-// Sort slides by created date (newest first)
-slideFiles.sort((a, b) => b.createdDate - a.createdDate);
+// Fix the TypeError by converting the createdDate to a Date object before calling toLocaleDateString
+slideFiles.sort((a, b) => new Date(b.createdDate) - new Date(a.createdDate));
 
 // Create HTML content
 const htmlContent = `<!DOCTYPE html>
@@ -145,7 +145,7 @@ const htmlContent = `<!DOCTYPE html>
       <img src="${slide.coverImage}" alt="Cover for ${slide.title}" class="card-image">
       <div class="card-content">
         <h2 class="card-title">${slide.title}</h2>
-        <div class="card-date">Created: ${slide.createdDate.toLocaleDateString('en-GB')}</div>
+        <div class="card-date">Created: ${new Date(slide.createdDate).toLocaleDateString('en-GB')}</div>
         <div class="card-filename">${slide.mdFile.replace('.md', '')}</div>
       </div>
     </a>`).join('')}
