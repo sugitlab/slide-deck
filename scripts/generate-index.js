@@ -78,8 +78,8 @@ const slideFiles = fs.readdirSync(slidesDir)
     
     // Extract created date from frontmatter or fallback to file stats
     const createdDate = frontmatter.date 
-      ? new Date(frontmatter.date).toLocaleDateString('en-GB')
-      : stats.birthtime.toLocaleDateString('en-GB');
+      ? new Date(frontmatter.date).toLocaleDateString('ja-JP')
+      : stats.birthtime.toLocaleDateString('ja-JP');
     
     const htmlFilename = file.replace('.md', '.html');
     
