@@ -12,6 +12,40 @@ if (!fs.existsSync(distDir)) {
   fs.mkdirSync(distDir, { recursive: true });
 }
 
+/**
+ * Parse frontmatter from markdown content
+ * @param {string} content - The markdown content
+ * @returns {Object} The parsed frontmatter as object
+ */
+function parseFrontmatter(content) {
+  const frontmatterRegex = /^---\s*\n([\s\S]*?)\n---\s*\n/;
+  const match = content.match(frontmatterRegex);
+  
+  if (!match) return {};
+  
+  const frontmatterText = match[1];
+  const frontmatter = {};
+  
+  // Split by lines and process each key-value pair
+  frontmatterText.split('\n').forEach(line => {
+    const colonIndex = line.indexOf(':');
+    if (colonIndex !== -1) {
+      const key = line.slice(0, colonIndex).trim();
+      let value = line.slice(colonIndex + 1).trim();
+      
+      // Remove quotes if present
+      if ((value.startsWith('"') && value.endsWith('"')) || 
+          (value.startsWith("'") && value.endsWith("'"))) {
+        value = value.slice(1, -1);
+      }
+      
+      frontmatter[key] = value;
+    }
+  });
+  
+  return frontmatter;
+}
+
 // Get all markdown files in slides directory
 const slideFiles = fs.readdirSync(slidesDir)
   .filter(file => file.endsWith('.md'))
@@ -19,27 +53,33 @@ const slideFiles = fs.readdirSync(slidesDir)
     const filePath = path.join(slidesDir, file);
     const content = fs.readFileSync(filePath, 'utf-8');
     const stats = fs.statSync(filePath);
-    const createdDate = stats.birthtime.toLocaleDateString('en-GB');
     
-    // Try to extract title from markdown frontmatter or first # heading
-    let title = file.replace('.md', '');
-    const titleMatch = content.match(/^#\s+(.+?)$/m) || content.match(/title:\s*["']?([^"'\n]+)["']?/m);
-    if (titleMatch) {
-      title = titleMatch[1].trim();
+    // Parse frontmatter
+    const frontmatter = parseFrontmatter(content);
+    
+    // Extract title from frontmatter or fallback to markdown heading or filename
+    let title = frontmatter.title;
+    if (!title) {
+      const titleMatch = content.match(/^#\s+(.+?)$/m);
+      title = titleMatch ? titleMatch[1].trim() : file.replace('.md', '');
     }
     
-    // Try to extract cover image from markdown content
-    // Look for image syntax in markdown: ![alt](url)
-    let coverImage = null;
-    const imageMatch = content.match(/!\[.*?\]\((.+?)\)/);
-    if (imageMatch) {
-      coverImage = imageMatch[1];
+    // Extract cover image from frontmatter or fallback to first image in content
+    let coverImage = frontmatter.coverImage;
+    if (!coverImage) {
+      const imageMatch = content.match(/!\[.*?\]\((.+?)\)/);
+      coverImage = imageMatch ? imageMatch[1] : null;
     }
 
-    // If no image found in content, use a default placeholder
+    // If no image found, use a placeholder
     if (!coverImage) {
-      coverImage = 'https://via.placeholder.com/300x200?text=Slide+Deck';
+      coverImage = 'https://via.placeholder.com/300x200?text=Image+Not+Found';
     }
+    
+    // Extract created date from frontmatter or fallback to file stats
+    const createdDate = frontmatter.date 
+      ? new Date(frontmatter.date).toLocaleDateString('en-GB')
+      : stats.birthtime.toLocaleDateString('en-GB');
     
     const htmlFilename = file.replace('.md', '.html');
     
@@ -52,13 +92,16 @@ const slideFiles = fs.readdirSync(slidesDir)
     };
   });
 
-// Fix the TypeError by converting the createdDate to a Date object before calling toLocaleDateString
+// Sort slides by creation date, newest first
 slideFiles.sort((a, b) => new Date(b.createdDate) - new Date(a.createdDate));
 
 // Generate slides HTML content
 const slidesContent = slideFiles.map(slide => `
     <a href="./${slide.htmlFile}" class="card">
-      <img src="${slide.coverImage}" alt="Cover for ${slide.title}" class="card-image">
+      <img src="${slide.coverImage}" 
+           alt="Cover for ${slide.title}" 
+           class="card-image"
+           onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=Image+Not+Found'; this.alt='Image not found';">
       <div class="card-content">
         <h2 class="card-title">${slide.title}</h2>
         <div class="card-date">Created: ${new Date(slide.createdDate).toLocaleDateString('en-GB')}</div>
