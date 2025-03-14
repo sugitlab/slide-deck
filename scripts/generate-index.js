@@ -104,7 +104,7 @@ const slidesContent = slideFiles.map(slide => `
            onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=Image+Not+Found'; this.alt='Image not found';">
       <div class="card-content">
         <h2 class="card-title">${slide.title}</h2>
-        <div class="card-date">Created: ${new Date(slide.createdDate).toLocaleDateString('en-GB')}</div>
+        <div class="card-date">Created: ${slide.createdDate}</div>
         <div class="card-filename">${slide.mdFile.replace('.md', '')}</div>
       </div>
     </a>`).join('');
