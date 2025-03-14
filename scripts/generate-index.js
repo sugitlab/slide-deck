@@ -114,7 +114,7 @@ let template = fs.readFileSync(templatePath, 'utf-8');
 
 // Replace placeholders with actual content
 template = template.replace('{{SLIDES_CONTENT}}', slidesContent);
-template = template.replace('{{UPDATED_DATE}}', new Date().toLocaleString('en-GB'));
+template = template.replace('{{UPDATED_DATE}}', new Date().toLocaleString('ja-JP'));
 
 // Write the index.html file
 fs.writeFileSync(outputPath, template);
