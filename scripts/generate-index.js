@@ -5,6 +5,7 @@ const path = require('path');
 const slidesDir = path.join(__dirname, '../slides');
 const outputPath = path.join(__dirname, '../dist/index.html');
 const distDir = path.join(__dirname, '../dist');
+const templatePath = path.join(__dirname, 'index.template.html');
 
 // Create dist directory if it doesn't exist
 if (!fs.existsSync(distDir)) {
@@ -54,93 +55,8 @@ const slideFiles = fs.readdirSync(slidesDir)
 // Fix the TypeError by converting the createdDate to a Date object before calling toLocaleDateString
 slideFiles.sort((a, b) => new Date(b.createdDate) - new Date(a.createdDate));
 
-// Create HTML content
-const htmlContent = `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Slide Decks by sugit.</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-      line-height: 1.6;
-    }
-    h1 {
-      border-bottom: 2px solid #eaecef;
-      padding-bottom: 0.3em;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-    @media (min-width: 768px) {
-      .gallery {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    @media (min-width: 1024px) {
-      .gallery {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-    .card {
-      border: 1px solid #eaecef;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-    .card-image {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .card-content {
-      padding: 1.5rem;
-    }
-    .card-title {
-      font-size: 1.25rem;
-      margin: 0 0 0.5rem;
-    }
-    .card-date {
-      color: #586069;
-      font-size: 0.85rem;
-      margin-bottom: 0.5rem;
-    }
-    .card-filename {
-      color: #586069;
-      font-size: 0.8rem;
-      margin-top: 1rem;
-    }
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-    footer {
-      margin-top: 3rem;
-      text-align: center;
-      color: #586069;
-    }
-  </style>
-</head>
-<body>
-  <a href="https://github.com/sugitlab" style="position: absolute; top: 10px; left: 10px;">
-    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width: 32px; height: 32px;">
-  </a>
-  <h1>Slide Deck by sugit.</h1>
-  <div class="gallery">
-    ${slideFiles.map(slide => `
+// Generate slides HTML content
+const slidesContent = slideFiles.map(slide => `
     <a href="./${slide.htmlFile}" class="card">
       <img src="${slide.coverImage}" alt="Cover for ${slide.title}" class="card-image">
       <div class="card-content">
@@ -148,15 +64,16 @@ const htmlContent = `<!DOCTYPE html>
         <div class="card-date">Created: ${new Date(slide.createdDate).toLocaleDateString('en-GB')}</div>
         <div class="card-filename">${slide.mdFile.replace('.md', '')}</div>
       </div>
-    </a>`).join('')}
-  </div>
-  <footer>
-    <p><small>Updated at: ${new Date().toLocaleString('en-GB')}</small></p>
-  </footer>
-</body>
-</html>`;
+    </a>`).join('');
+
+// Read the template file
+let template = fs.readFileSync(templatePath, 'utf-8');
+
+// Replace placeholders with actual content
+template = template.replace('{{SLIDES_CONTENT}}', slidesContent);
+template = template.replace('{{UPDATED_DATE}}', new Date().toLocaleString('en-GB'));
 
 // Write the index.html file
-fs.writeFileSync(outputPath, htmlContent);
+fs.writeFileSync(outputPath, template);
 
 console.log(`Gallery index file generated at ${outputPath}`);
