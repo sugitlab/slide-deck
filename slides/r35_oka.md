@@ -7,10 +7,12 @@ date: '2023-05-15'
 theme: techtrain
 ---
 
-# ああああ
-## 品質第一からスピード第一へ
+<!-- _class: title -->
+# 越境しよう
+## 品質第一とスピード第一のドメイン経験から得た、</br >成果を出せるPMの共通項
 
-R35. Meetup in OKINAWA
+
+R35. Meetup in OKINAWA | 2025/3/21
 @sugit
 
 ---
