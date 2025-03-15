@@ -7,13 +7,35 @@ date: '2023-05-15'
 theme: techtrain
 ---
 
-# R35. Meetup in OKINAWA
+# ああああ
+## 品質第一からスピード第一へ
+
+R35. Meetup in OKINAWA
+@sugit
+
+---
+
+# まえふり
+
+hohohoho
+
+
+---
+
+
+# 自己紹介
+
+piyopiyo
+
+---
+
+# 会社紹介
 
 hogehoge
 
 ---
 
-# next
+# サービス紹介
 
-piyopiyo
+fugafuga
 
