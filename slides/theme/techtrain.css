@@ -1,90 +1,200 @@
-/* TechTrain Marp Theme */
+/* @theme techtrain */
 
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap');
 
+@import-theme 'default';
+
 /* Theme setup */
 :root {
-  --color-primary: #4a55a7;
-  --color-secondary: #f0f0f0;
-  --color-background: #ffffff;
-  --color-text: #333333;
+  /* Define Colors */
+  /* TechTrain Blue */
+  --color-tt-blue-5: #EFEFEF;
+  --color-tt-blue-10: #E9E9F5;
+  --color-tt-blue-20: #BCC4D3;
+  --color-tt-blue-30: #777B90;
+  --color-tt-blue-40: #3D3D5C;
+  --color-tt-blue-50: #2E2E45;
+  --color-tt-blue-60: #232334;
+  --color-tt-blue-70: #20202F;
+  --color-tt-blue-80: #1C1C2A;
+  --color-tt-blue-90: #1A1A26;
+  --color-tt-blue-100: #171722;
+  --color-tt-blue-primary: var(--color-tt-blue-40);
+  /* TechTrain Gray */
+  --color-tt-gray-10: #F9F9F9;
+  --color-tt-gray-20: #C7C7C7;
+  --color-tt-gray-30: #9F9F9F;
+  --color-tt-gray-40: #7F7F7F;
+  --color-tt-gray-50: #666666;
+  --color-tt-gray-60: #525252;
+  --color-tt-gray-70: #414141;
+  --color-tt-gray-80: #343434;
+  --color-tt-gray-90: #2A2A2A;
+  --color-tt-gray-100: #212121;
+  --color-tt-gray-primary: var(--color-tt-gray-20);
+  /* TechTrain Focus */
+  --color-tt-focus-10: #C7E1FA;
+  --color-tt-focus-20: #98C7F5;
+  --color-tt-focus-30: #6EB1F1;
+  --color-tt-focus-40: #499DEE;
+  --color-tt-focus-50: #288CEB;
+  --color-tt-focus-60: #147ADB;
+  --color-tt-focus-70: #116ABF;
+  --color-tt-focus-80: #0F5CA6;
+  --color-tt-focus-90: #0D5090;
+  --color-tt-focus-primary: var(--color-tt-focus-60);
+  /* TechTrain Caution */
+  --color-tt-caution-10: #F9CDCA;
+  --color-tt-caution-20: #F5A7A2;
+  --color-tt-caution-30: #F1847E;
+  --color-tt-caution-40: #EE655D;
+  --color-tt-caution-50: #EB493F;
+  --color-tt-caution-60: #E82D21;
+  --color-tt-caution-70: #D62216;
+  --color-tt-caution-80: #BE1E14;
+  --color-tt-caution-90: #A91B12;
+  --color-tt-caution-primary: var(--color-tt-caution-60);
+  /* TechTrain Warning */
+  --color-tt-warning-10: #FFEEB4;
+  --color-tt-warning-20: #FFE27B;
+  --color-tt-warning-30: #FFD74A;
+  --color-tt-warning-40: #FFCE1F;
+  --color-tt-warning-50: #F9C200;
+  --color-tt-warning-60: #D4A500;
+  --color-tt-warning-70: #B48C00;
+  --color-tt-warning-80: #997700;
+  --color-tt-warning-90: #826500;
+  --color-tt-warning-primary: var(--color-tt-warning-50);
+  /* TechTrain Success */
+  --color-tt-success-10: #C4E7CC;
+  --color-tt-success-20: #A8DCB4;
+  --color-tt-success-30: #8FD29E;
+  --color-tt-success-40: #78C38A;
+  --color-tt-success-50: #63C178;
+  --color-tt-success-60: #4EB966;
+  --color-tt-success-70: #43AA5A;
+  --color-tt-success-80: #3C9951;
+  --color-tt-success-90: #368A49;
+  --color-tt-success-primary: var(--color-tt-success-50);
+  /* TechTrain Base */
+  --color-tt-black: #19191A;
+  --color-tt-white: #FFFFFF;
+
+  /* --Semantics-- */
+  /* Logo */
+  --color-logo-light: var(--color-tt-blue-40);
+  --color-logo-dark: var(--color-tt-white);
+  /* Background */
+  --color-bg-primary-light: var(--color-tt-white);
+  --color-bg-secondary-light: var(--color-tt-gray-10);
+  --color-bg-tertiary-light: var(--color-tt-blue-5);
+  --color-bg-quaternary-light: var(--color-tt-blue-10);
+  --color-bg-reverse-light: var(--color-tt-blue-90);
+
+  --color-bg-primary-dark: var(--color-tt-blue-90);
+  --color-bg-secondary-dark: var(--color-tt-blue-60);
+  --color-bg-tertiary-dark: var(--color-tt-blue-50);
+  --color-bg-quaternary-dark: var(--color-tt-blue-40);
+  --color-bg-reverse-dark: var(--color-tt-white);
+  /* Text */
+  --color-text-body-light: var(--color-tt-blue-40);
+  --color-text-description-light: var(--color-tt-blue-30);
+  --color-text-disable-light: var(--color-tt-blue-20);
+  --color-text-placeholder-light: var(--color-tt-blue-20);
+  --color-text-onfill-light: var(--color-tt-focus-10);
+  --color-text-reverse-light: var(--color-tt-white);
+  --color-text-caution-light: var(--color-tt-caution-70);
+  --color-text-body-dark: var(--color-tt-blue-10);
+  --color-text-description-dark: var(--color-tt-blue-20);
+  --color-text-disable-dark: var(--color-tt-blue-30);
+  --color-text-placeholder-dark: var(--color-tt-blue-30);
+  --color-text-onfill-dark: var(--color-tt-white);
+  --color-text-reverse-dark: var(--color-tt-blue-90);
+  --color-text-caution-dark: var(--color-tt-caution-40);
+  /* Link */
+  --color-link-default-light: var(--color-tt-focus-70);
+  --color-link-hover-light: var(--color-tt-focus-90);
+  --color-link-active-light: var(--color-tt-focus-90);
+  --color-link-visited-light: var(--color-tt-focus-90);
+  --color-link-default-dark: var(--color-tt-focus-40);
+  --color-link-hover-dark: var(--color-tt-focus-20);
+  --color-link-active-dark: var(--color-tt-focus-20);
+  --color-link-visited-dark: var(--color-tt-focus-20);
+  /* Button */
+  --color-button-primary-default-light: var(--color-tt-focus-60);
+  --color-button-primary-hover-light: var(--color-tt-focus-90);
+  --color-button-primary-active-light: var(--color-tt-focus-90);
+  --color-button-primary-disable-light: var(--color-tt-blue-5);
+  --color-button-secondary-default-light: var(--color-tt-focus-60);
+  --color-button-secondary-hover-light: var(--color-tt-focus-90);
+  --color-button-secondary-active-light: var(--color-tt-focus-90);
+  --color-button-secondary-disable-light: var(--color-tt-blue-10);
+  --color-button-caution-default-light: var(--color-tt-caution-50);
+  --color-button-caution-hover-light: var(--color-tt-caution-90);
+  --color-button-caution-active-light: var(--color-tt-caution-90);
+  --color-button-caution-disable-light: var(--color-tt-caution-30);
+  --color-button-primary-default-dark: var(--color-tt-focus-40);
+  --color-button-primary-hover-dark: var(--color-tt-focus-20);
+  --color-button-primary-active-dark: var(--color-tt-focus-20);
+  --color-button-primary-disable-dark: var(--color-tt-blue-20);
+  --color-button-secondary-default-dark: var(--color-tt-white-100);
+  --color-button-secondary-hover-dark: var(--color-tt-white-60-alpha);
+  --color-button-secondary-active-dark: var(--color-tt-white-60-alpha);
+  --color-button-secondary-disable-dark: var(--color-tt-white-20-alpha);
+  --color-button-caution-default-dark: var(--color-tt-caution-50);
+  --color-button-caution-hover-dark: var(--color-tt-caution-20);
+  --color-button-caution-active-dark: var(--color-tt-caution-20);
+  --color-button-caution-disable-dark: var(--color-tt-caution-20);
+
+  /* font-family */
   --font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
 /* Base section styles */
 section {
   font-family: var(--font-family);
-  background-color: var(--color-background);
-  color: var(--color-text);
+  background-color: var(--color-bg-primary-light);
+  color: var(--color-text-body-light);
   padding: 40px;
-  background-image: url('./TechTrain_Logo.png');
-  background-position: right bottom;
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-opacity: 0.1;
   position: relative;
-}
-
-/* Header for each slide */
-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 10px;
-  background: linear-gradient(90deg, var(--color-primary), transparent);
-}
-
-/* Logo in the header */
-section::after {
-  content: '';
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 120px;
-  height: 40px;
-  background-image: url('./TechTrain_Logo.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 /* Heading styles */
 h1 {
-  color: var(--color-primary);
-  font-size: 2.5em;
+  color: var(--color-text-body-light);
+  font-size: 1.8em;
   margin-bottom: 0.5em;
   font-weight: 700;
-  border-bottom: 2px solid var(--color-primary);
+  border-bottom: 2px solid var(--color-bg-primary-light);
   padding-bottom: 10px;
 }
 
 h2 {
-  color: var(--color-primary);
-  font-size: 1.8em;
+  color: var(--color-text-description-light);
+  font-size: 1.4em;
   margin-bottom: 0.5em;
   font-weight: 500;
 }
 
 h3 {
-  font-size: 1.5em;
-  color: var(--color-text);
+  font-size: 1.2em;
+  color: var(--color-text-description-light);
   margin-bottom: 0.5em;
   font-weight: 500;
 }
 
 /* Paragraph styles */
 p {
-  font-size: 1.2em;
+  font-size: 1em;
   line-height: 1.5;
   margin-bottom: 1em;
 }
 
 /* List styles */
-ul, ol {
-  font-size: 1.2em;
+ul,
+ol {
+  font-size: 1em;
   line-height: 1.5;
   margin-left: 1em;
   margin-bottom: 1em;
@@ -97,14 +207,14 @@ li {
 /* Code block styles */
 code {
   font-family: 'Monaco', 'Consolas', monospace;
-  background-color: #f5f5f5;
+  background-color: var(--color-bg-secondary-light);
   padding: 0.2em 0.4em;
   border-radius: 3px;
   font-size: 0.9em;
 }
 
 pre {
-  background-color: #f5f5f5;
+  background-color: var(--color-bg-secondary-light);
   padding: 1em;
   border-radius: 5px;
   overflow: auto;
@@ -119,14 +229,14 @@ table {
 }
 
 th {
-  background-color: var(--color-primary);
-  color: white;
+  background-color: var(--color-bg-primary-light);
+  color: var(--color-bg-primary-light);
   padding: 0.5em;
   text-align: left;
 }
 
 td {
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-bg-quaternary-light);
   padding: 0.5em;
 }
 
@@ -138,7 +248,7 @@ img {
 
 /* Block quote styles */
 blockquote {
-  border-left: 5px solid var(--color-primary);
+  border-left: 5px solid var(--color-bg-primary-light);
   padding-left: 1em;
   margin-left: 0;
   color: #666;
@@ -147,7 +257,7 @@ blockquote {
 
 /* Link styles */
 a {
-  color: var(--color-primary);
+  color: var(--color-bg-primary-light);
   text-decoration: none;
 }
 
@@ -156,7 +266,7 @@ a:hover {
 }
 
 /* Footer styles - for page numbers */
-section::after {
+footer {
   font-size: 0.8em;
   color: #888;
   position: absolute;
@@ -174,8 +284,12 @@ section.title {
 }
 
 section.title h1 {
-  font-size: 3em;
+  font-size: 2em;
   border: none;
+}
+
+section.title h2 {
+  font-size: 1.5em;
 }
 
 /* Two-column layout */
@@ -187,25 +301,25 @@ section.title h1 {
 
 /* Highlighted text */
 .highlight {
-  background-color: rgba(74, 85, 167, 0.1);
-  color: var(--color-primary);
+  background-color: var(--color-button-primary-active-light);
+  color: var(--color-bg-primary-light);
   padding: 0.2em 0.4em;
   border-radius: 3px;
 }
 
 /* Dark mode variant */
 section.dark {
-  background-color: #2d3a4f;
-  color: white;
+  background-color: var(--color-bg-tertiary-dark);
+  color: var(--color-bg-primary-light);
 }
 
 section.dark h1,
 section.dark h2,
 section.dark h3 {
-  color: white;
+  color: var(--color-text-reverse-light);
 }
 
 section.dark code {
-  background-color: #1e2a3a;
-  color: #f0f0f0;
+  background-color: var(--color-bg-quaternary-dark);
+  color: var(--color-text-description-light);
 }
