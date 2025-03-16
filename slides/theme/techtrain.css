@@ -151,8 +151,17 @@
 
 /* Base section styles */
 section {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  text-align: start;
   font-family: var(--font-family);
   background-color: var(--color-bg-primary-light);
+  background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/light-bg-element.png);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
   color: var(--color-text-body-light);
   padding: 40px;
   position: relative;
@@ -164,8 +173,9 @@ h1 {
   font-size: 1.8em;
   margin-bottom: 0.5em;
   font-weight: 700;
-  border-bottom: 2px solid var(--color-bg-primary-light);
   padding-bottom: 10px;
+  width: 100%;
+  border-bottom: 1px solid var(--color-text-body-light);
 }
 
 h2 {
@@ -274,19 +284,25 @@ footer {
 
 /* Title slide */
 section.title {
+  background-color: var(--color-bg-tertiary-dark);
+  background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/dark-bg.png);
+  background-size: contain;
+  color: var(--color-text-reverse-light);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
 }
 
+
 section.title h1 {
+  color: var(--color-text-reverse-light);
   font-size: 2.5em;
   border: none;
 }
 
 section.title h2 {
+  color: var(--color-text-reverse-light);
   font-size: 1.5em;
 }
 
@@ -306,11 +322,6 @@ section.title h2 {
 }
 
 /* Dark mode variant */
-section.dark {
-  background-color: var(--color-bg-tertiary-dark);
-  color: var(--color-bg-primary-light);
-}
-
 section.dark h1,
 section.dark h2,
 section.dark h3 {
