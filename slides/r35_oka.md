@@ -146,13 +146,7 @@ sugit(すぎっと)
 
 # 5〜9年目
 
-<div class="puru-bubble sad">
-    <p>こんにちは！これは通常の吹き出しです。クラス一つで簡単に使えます。</p>
-</div>
-
-<div class="riku-bubble sad">
-    <p>こんにちは！これは通常の吹き出しです。クラス一つで簡単に使えます。</p>
-</div>
+hogehoge
 
 ---
 
