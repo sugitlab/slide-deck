@@ -103,6 +103,19 @@ This slide uses the dark variant of the theme for emphasis.
 
 ---
 
+# PURU RIKU Bubble
+
+<div class="puru-bubble sad">
+    <p>こんにちは！これは通常の吹き出しです。クラス一つで簡単に使えます。</p>
+</div>
+
+<div class="riku-bubble sad">
+    <p>こんにちは！これは通常の吹き出しです。クラス一つで簡単に使えます。</p>
+</div>
+
+
+---
+
 # Thank You!
 
 ## Contact Information
