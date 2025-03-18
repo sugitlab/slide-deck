@@ -294,7 +294,6 @@ section.title {
   align-items: flex-start;
 }
 
-
 section.title h1 {
   color: var(--color-text-reverse-light);
   font-size: 2.5em;
@@ -306,10 +305,35 @@ section.title h2 {
   font-size: 1.5em;
 }
 
+/* SubTitle slide */
+section.subtitle {
+  background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/light-bg-element.png);
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  color: var(--color-text-reverse-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+section.subtitle h1 {
+  font-size: 2em;
+  border: none;
+}
+
+
 /* Two-column layout */
 .columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.columns-2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   gap: 20px;
 }
 
@@ -331,4 +355,102 @@ section.dark h3 {
 section.dark code {
   background-color: var(--color-bg-quaternary-dark);
   color: var(--color-text-description-light);
+}
+
+/* Charactor */
+
+/* 吹き出し全体のスタイル */
+.character-bubble {
+  display: flex;
+  align-items: flex-end;
+  max-width: 800px;
+  margin: 30px auto;
+  position: relative;
+}
+
+/* キャラクター部分のスタイル */
+.character-bubble::before {
+  content: '';
+  width: 150px;
+  height: 200px;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin-right: 20px;
+  flex-shrink: 0;
+
+  /* 画像を背景として指定する場合 */
+  /* background-image: url('character.png'); */
+  background-size: cover;
+  background-position: center;
+
+  /* プレースホルダーテキスト */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* 吹き出し部分のスタイル */
+.character-bubble p {
+  position: relative;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 0 30px 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* 吹き出しの三角形部分 */
+.character-bubble p::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  bottom: 30px;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-right: 25px solid #fff;
+  border-bottom: 15px solid transparent;
+}
+
+/* 吹き出しの種類 */
+.character-bubble.happy p {
+  background-color: #e3f2fd;
+}
+
+.character-bubble.happy p::before {
+  border-right-color: #e3f2fd;
+}
+
+.character-bubble.question p {
+  background-color: #f3e5f5;
+}
+
+.character-bubble.question p::before {
+  border-right-color: #f3e5f5;
+}
+
+.character-bubble.excited p {
+  background-color: #fff8e1;
+}
+
+.character-bubble.excited p::before {
+  border-right-color: #fff8e1;
+}
+
+/* キャラクターの画像を変更する場合はこちらを編集 */
+.character-bubble.chara1::before {
+  /* background-image: url('chara1.png'); */
+  /* 以下のコメントを外して背景色を変更するとキャラクターを区別できます */
+  /* background-color: #ffcccc; */
+}
+
+.character-bubble.chara2::before {
+  /* background-image: url('chara2.png'); */
+  /* background-color: #ccffcc; */
 }

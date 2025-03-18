@@ -8,7 +8,7 @@ theme: techtrain
 ---
 
 <!-- _class: title -->
-# ヒト理解からはじめるモノづくり
+# ヒトからはじめるモノづくり
 ## 品質第一の業界とスピード第一の業界の経験から見えてきた、PMのキャリア
 
 
@@ -25,45 +25,57 @@ PMは翻訳家といわれたり、折衝が8割といわれることが多く�
 
 ---
 
+<!-- _class: subtitle -->
 # 自らハードルを上げていくスタイル
+
 
 ---
 
 # 自己紹介
 
-- 杉本真二（ジャスト35歳）
-- sugit(すぎっと)
 
-// ここに写真
+<div class="columns-2">
 
-- 株式会社TechBowl 取締役COO/CPO
-- Flutterの人、で通じることの方が多い
-- やってきたこと → 研究、エンジニア、PM、技術営業、マーケ、経営(New)
-- モットーは常にワクワクする仕事をすること
+<div class="row">
+
+![width:360px](./r35_oka.assets/profile.png)
+sugit(すぎっと)
+
+</div>
+
+<div>
+
+- 概要
+    - Flutterの人、で通じることの方が多い
+- モットー
+    - 常にワクワクする仕事をすること
+- やってきたこと
+    - 研究、エンジニア、PM、技術営業、マーケ、経営(New)
+- 社歴
+    - 島津製作所 (R&D) → TechBowl
+
+</div>
+</div>
+
+株式会社TechBowl 取締役COO/CPO
 
 ---
 
 # 会社紹介
 
-エンジニアリングで、日本の国力を上げる。
-
-// ここに写真
+![](./r35_oka.assets/mission.png)
 
 ---
 
 # サービス紹介
 
-テクノロジーを支える、全ての人のターミナルに。
-
-// ここに写真
+![height:540px](./r35_oka.assets/service.png)
 
 ---
 
 # お友だち紹介
 
-PURU & RIKU
-
-// ここに写真
+![height:540px](./r35_oka.assets/puru-and-riku.png)
 
 ---
 
@@ -134,7 +146,9 @@ PURU & RIKU
 
 # 5〜9年目
 
-hoge
+<div class="character-bubble">
+    <p>こんにちは！これは通常の吹き出しです。クラス一つで簡単に使えます。</p>
+</div>
 
 ---
 
