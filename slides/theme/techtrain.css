@@ -158,7 +158,7 @@ section {
   text-align: start;
   font-family: var(--font-family);
   background-color: var(--color-bg-primary-light);
-  background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/light-bg-element.png);
+  background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/light_bg_element.png);
   background-position: right;
   background-size: contain;
   background-repeat: no-repeat;
@@ -184,7 +184,7 @@ h1::after {
   height: 60px;
   position: absolute;
   right: 20px;
-  background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/TechTrain_Logo.png);
+  background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/techtrain_logo.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -297,7 +297,7 @@ footer {
 /* Title slide */
 section.title {
   background-color: var(--color-bg-tertiary-dark);
-  background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/dark-bg.png);
+  background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/dark_bg.png);
   background-size: contain;
   color: var(--color-text-reverse-light);
   display: flex;
@@ -328,7 +328,7 @@ section.title h2 {
 
 /* SubTitle slide */
 section.subtitle {
-  background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/light-bg-element.png);
+  background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/light_bg_element.png);
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
