@@ -65,15 +65,15 @@ const slideFiles = fs.readdirSync(slidesDir)
     }
     
     // Extract cover image from frontmatter or fallback to first image in content
-    let coverImage = frontmatter.coverImage;
-    if (!coverImage) {
+    let image = frontmatter.image;
+    if (!image) {
       const imageMatch = content.match(/!\[.*?\]\((.+?)\)/);
-      coverImage = imageMatch ? imageMatch[1] : null;
+      image = imageMatch ? imageMatch[1] : null;
     }
 
     // If no image found, use a placeholder
-    if (!coverImage) {
-      coverImage = 'https://via.placeholder.com/300x200?text=Image+Not+Found';
+    if (!image) {
+      image = 'https://via.placeholder.com/300x200?text=Image+Not+Found';
     }
     
     // Extract created date from frontmatter or fallback to file stats
@@ -88,7 +88,7 @@ const slideFiles = fs.readdirSync(slidesDir)
       mdFile: file,
       htmlFile: htmlFilename,
       createdDate,
-      coverImage
+      image
     };
   });
 
@@ -98,7 +98,7 @@ slideFiles.sort((a, b) => new Date(b.createdDate) - new Date(a.createdDate));
 // Generate slides HTML content
 const slidesContent = slideFiles.map(slide => `
     <a href="./${slide.htmlFile}" class="card">
-      <img src="${slide.coverImage}" 
+      <img src="${slide.image}" 
            alt="Cover for ${slide.title}" 
            class="card-image"
            onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=Image+Not+Found'; this.alt='Image not found';">
