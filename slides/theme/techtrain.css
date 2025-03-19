@@ -184,7 +184,7 @@ h1::after {
   height: 60px;
   position: absolute;
   right: 20px;
-  background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/techtrain_logo.png);
+  background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/logo.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
