@@ -326,6 +326,12 @@ section.title h2 {
   font-size: 1.5em;
 }
 
+section.title h3 {
+  color: var(--color-text-description-dark);
+  font-size: 1.2em;
+}
+
+
 /* SubTitle slide */
 section.subtitle {
   background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/light_bg_element.png);
