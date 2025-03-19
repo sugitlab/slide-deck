@@ -50,6 +50,12 @@ function hello() {
 
 ---
 
+<!-- _class: subtitle -->
+
+# Subtitle Slide
+
+---
+
 # Code Examples
 
 ```python
@@ -105,7 +111,7 @@ This slide uses the dark variant of the theme for emphasis.
 
 # PURU RIKU Bubble
 
-<div class="puru-bubble sad">
+<div class="puru-bubble">
     <p>こんにちは！これは通常の吹き出しです。クラス一つで簡単に使えます。</p>
 </div>
 
@@ -113,12 +119,26 @@ This slide uses the dark variant of the theme for emphasis.
     <p>こんにちは！これは通常の吹き出しです。クラス一つで簡単に使えます。</p>
 </div>
 
+---
+
+<!-- _class: subtitle riku stand -->
+# RIKU
+
+options: ask/happy/sad/salute/smile/stand
 
 ---
+
+<!-- _class: subtitle puru salute -->
+# PURU
+
+options: happy/lookat/sad/salute/smile/think
+
+---
+
 
 # Thank You!
 
 ## Contact Information
 
-info@techtrain.example.com
-www.techtrain-example.com
+- `info@techtrain.example.com`
+- `www.techtrain-example.com`

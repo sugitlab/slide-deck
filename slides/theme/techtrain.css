@@ -178,6 +178,18 @@ h1 {
   border-bottom: 1px solid var(--color-text-body-light);
 }
 
+h1::after {
+  content: '';
+  width: 240px;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/TechTrain_Logo.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 h2 {
   color: var(--color-text-description-light);
   font-size: 1.4em;
@@ -300,6 +312,15 @@ section.title h1 {
   border: none;
 }
 
+/* h1の擬似要素をリセット */
+section.title h1::after {
+  content: none;
+  width: 0;
+  height: 0;
+  background: none;
+  position: static;
+}
+
 section.title h2 {
   color: var(--color-text-reverse-light);
   font-size: 1.5em;
@@ -321,36 +342,16 @@ section.subtitle {
 section.subtitle h1 {
   font-size: 2em;
   border: none;
-}
-
-/* Riku ask slide */
-section.riku-ask {
-  background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/light-bg-element.png);
-  background-size: contain;
-  background-position: right;
-  background-repeat: no-repeat;
-  color: var(--color-text-reverse-light);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-section.riku-ask h1 {
-  font-size: 2em;
-  border: none;
   text-align: center;
 }
 
-section.riku-ask h1::after {
-  content: '';
-  width: 150px;
-  height: 150px;
-  display: flex;
-  margin: auto;
-  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_ask.png?raw=true');
-  background-size: cover;
-  background-position: center;
+/* h1の擬似要素をリセット */
+section.subtitle h1::after {
+  content: none;
+  width: 0;
+  height: 0;
+  background: none;
+  position: static;
 }
 
 /* Two-column layout */
@@ -386,8 +387,8 @@ section.dark code {
   color: var(--color-text-description-light);
 }
 
-/* --- Charactor --- */
-/* PURU */
+/* --- プルリクの吹き出し要素 --- */
+/* --- PURU --- */
 /* 吹き出し全体のスタイル */
 .puru-bubble {
   display: flex;
@@ -449,7 +450,7 @@ section.dark code {
   background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_sad.png?raw=true');
 }
 
-/* RIKU */
+/* --- RIKU --- */
 /* 吹き出し全体スタイル */
 .riku-bubble {
   display: flex;
@@ -509,4 +510,72 @@ section.dark code {
 /* 吹き出しの種類 */
 .riku-bubble.sad::before {
   background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_sad.png?raw=true');
+}
+
+/* --- プルリクの強調要素 --- */
+section.puru h1::after {
+  content: '';
+  width: 150px;
+  height: 150px;
+  display: flex;
+  margin: auto;
+  margin-top: 60px;
+  background-size: cover;
+}
+
+section.puru.happy h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_happy.png?raw=true');
+}
+
+section.puru.lookat h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_lookat.png?raw=true');
+}
+
+section.puru.sad h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_sad.png?raw=true');
+}
+
+section.puru.salute h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_salute.png?raw=true');
+}
+
+section.puru.smile h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_smile.png?raw=true');
+}
+
+section.puru.think h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_think.png?raw=true');
+}
+
+section.riku h1::after {
+  content: '';
+  width: 150px;
+  height: 150px;
+  display: flex;
+  margin: auto;
+  background-size: cover;
+}
+
+section.riku.happy h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_happy.png?raw=true');
+}
+
+section.riku.ask h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_ask.png?raw=true');
+}
+
+section.riku.salute h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_salute.png?raw=true');
+}
+
+section.riku.stand h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_stand.png?raw=true');
+}
+
+section.riku.sad h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_sad.png?raw=true');
+}
+
+section.riku.smile h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_smile.png?raw=true');
 }
