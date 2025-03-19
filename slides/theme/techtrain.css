@@ -323,6 +323,35 @@ section.subtitle h1 {
   border: none;
 }
 
+/* Riku ask slide */
+section.riku-ask {
+  background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/light-bg-element.png);
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  color: var(--color-text-reverse-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+section.riku-ask h1 {
+  font-size: 2em;
+  border: none;
+  text-align: center;
+}
+
+section.riku-ask h1::after {
+  content: '';
+  width: 150px;
+  height: 150px;
+  display: flex;
+  margin: auto;
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_ask.png?raw=true');
+  background-size: cover;
+  background-position: center;
+}
 
 /* Two-column layout */
 .columns {
