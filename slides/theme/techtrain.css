@@ -192,7 +192,7 @@ h1::after {
 
 h2 {
   color: var(--color-text-body-light);
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: 500;
 }
 
@@ -330,7 +330,6 @@ section.title h3 {
   font-size: 1.2em;
 }
 
-
 /* SubTitle slide */
 section.subtitle {
   background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/light_bg_element.png);
@@ -352,6 +351,34 @@ section.subtitle h1 {
 
 /* h1の擬似要素をリセット */
 section.subtitle h1::after {
+  content: none;
+  width: 0;
+  height: 0;
+  background: none;
+  position: static;
+}
+
+/* Summary slide */
+section.summary {
+  background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/light_bg_element.png);
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section.summary h1 {
+  font-size: 2em;
+  border: none;
+  text-align: center;
+  color: var(--color-text-body-light);
+}
+
+/* h1の擬似要素をリセット */
+section.summary h1::after {
   content: none;
   width: 0;
   height: 0;
@@ -385,7 +412,7 @@ section.dark h1,
 section.dark h2,
 section.dark h3 {
   color: var(--color-o)
-  /* color: var(--color-text-reverse-light);*/
+    /* color: var(--color-text-reverse-light);*/
 }
 
 section.dark code {
@@ -456,6 +483,18 @@ section.dark code {
   background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_sad.png?raw=true');
 }
 
+.puru-bubble.smile::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_smile.png?raw=true');
+}
+
+.puru-bubble.happy::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_happy.png?raw=true');
+}
+
+.puru-bubble.think::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_think.png?raw=true');
+}
+
 /* --- RIKU --- */
 /* 吹き出し全体スタイル */
 .riku-bubble {
@@ -516,6 +555,18 @@ section.dark code {
 /* 吹き出しの種類 */
 .riku-bubble.sad::before {
   background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_sad.png?raw=true');
+}
+
+.riku-bubble.salute::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_salute.png?raw=true');
+}
+
+.riku-bubble.smile::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_smile.png?raw=true');
+}
+
+.riku-bubble.happy::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_happy.png?raw=true');
 }
 
 /* --- プルリクの強調要素 --- */
