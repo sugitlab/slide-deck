@@ -2,7 +2,7 @@
 marp: true
 favicon: 'https://avatars.githubusercontent.com/u/26006414'
 title: 'R35. Meetup in OKINAWA'
-image: 'https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/ogps/r35_okayy.png'
+image: 'https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/ogps/r35_oka.png'
 date: '2025-03-21'
 theme: techtrain
 ---
