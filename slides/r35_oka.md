@@ -37,7 +37,7 @@ PMは翻訳家といわれたり、折衝が8割といわれることが多く�
 
 <div class="row">
 
-![width:360px](./r35_oka.assets/profile.png)
+![width:360px](./assets/profile.png)
 sugit(すぎっと)
 
 </div>
@@ -62,19 +62,19 @@ sugit(すぎっと)
 
 # 会社紹介
 
-![](./r35_oka.assets/mission.png)
+![](./assets/mission.png)
 
 ---
 
 # サービス紹介
 
-![height:540px](./r35_oka.assets/service.png)
+![height:540px](./assets/service.png)
 
 ---
 
 # お友だち紹介
 
-![height:540px](./r35_oka.assets/puru-and-riku.png)
+![height:540px](./assets/puru-and-riku.png)
 
 ---
 
