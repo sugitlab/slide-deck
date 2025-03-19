@@ -2,7 +2,7 @@
 marp: true
 paginate: true
 title: 'TechTrain Presentation'
-image: './dist/r35_oka.png'
+image: '~/dist/r35_oka.png'
 date: '2023-05-15'
 theme: techtrain
 ---
