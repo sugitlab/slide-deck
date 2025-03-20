@@ -1,7 +1,7 @@
 ---
 marp: true
 paginate: true
-title: 'TechTrain Presentation'
+title: 'TechTrain Theme Template'
 image: 'https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/ogps/techtrain-theme.png'
 date: '2025-01-01'
 theme: techtrain
