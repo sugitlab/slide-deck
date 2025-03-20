@@ -85,24 +85,25 @@ const slideFiles = fs.readdirSync(slidesDir)
    
     // get 'hide' frontmatter option (boolean)
     const hide = frontmatter.hide === 'true';
-    if (hide) {
-      return null; // Skip this slide
-    }
 
     return {
       title,
       mdFile: file,
       htmlFile: htmlFilename,
       createdDate,
-      image
+      image,
+      hide
     };
   });
 
 // Sort slides by creation date, newest first
 slideFiles.sort((a, b) => new Date(b.createdDate) - new Date(a.createdDate));
 
+// if hide is true, remove the slide from the list
+const visibleSlides = slideFiles.filter(slide => !slide.hide);
+
 // Generate slides HTML content
-const slidesContent = slideFiles.map(slide => `
+const slidesContent = visibleSlides.map(slide => `
     <a href="./${slide.htmlFile}" class="card">
       <img src="${slide.image}" 
            alt="Cover for ${slide.title}" 
