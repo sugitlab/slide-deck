@@ -5,6 +5,7 @@ title: 'TechTrain Theme Template'
 image: 'https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/ogps/techtrain-theme.png'
 date: '2025-01-01'
 theme: techtrain
+hide: true
 ---
 
 <!-- _class: title -->

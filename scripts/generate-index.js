@@ -82,7 +82,13 @@ const slideFiles = fs.readdirSync(slidesDir)
       : stats.birthtime.toLocaleDateString('ja-JP');
     
     const htmlFilename = file.replace('.md', '.html');
-    
+   
+    // get 'hide' frontmatter option (boolean)
+    const hide = frontmatter.hide === 'true';
+    if (hide) {
+      return null; // Skip this slide
+    }
+
     return {
       title,
       mdFile: file,
