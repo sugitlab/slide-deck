@@ -43,7 +43,7 @@ sugit(すぎっと) / X:@sugitlab
 - やってきたこと
     - 研究、エンジニア、PM、技術営業、マーケ、経営(New)
 - 社歴
-    - 島津製作所 (R&D) → TechBowl (6人目社員)
+    - 島津製作所 (R&D Mgr) → TechBowl (6人目社員)
 
 </div>
 </div>

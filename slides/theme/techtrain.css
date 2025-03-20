@@ -203,6 +203,17 @@ h3 {
   font-weight: 500;
 }
 
+/* Strong Message */
+p.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
 /* Paragraph styles */
 p {
   font-size: 1em;
