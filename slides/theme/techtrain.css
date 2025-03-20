@@ -604,6 +604,10 @@ section.puru.think h1::after {
   background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_think.png?raw=true');
 }
 
+section.puru.peek h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_peek.png?raw=true');
+}
+
 section.riku h1::after {
   content: '';
   width: 150px;
@@ -635,4 +639,25 @@ section.riku.sad h1::after {
 
 section.riku.smile h1::after {
   background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_smile.png?raw=true');
+}
+
+section.riku.wink h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_wink.png?raw=true');
+}
+
+section.pururiku h1::after {
+  content: '';
+  width: 150px;
+  height: 150px;
+  display: flex;
+  margin: auto;
+  background-size: cover;
+}
+
+section.pururiku.peek h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/pururiku_peek.png?raw=true');
+}
+
+section.pururiku.bow h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/pururiku_bow.png?raw=true');
 }
