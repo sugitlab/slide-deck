@@ -269,7 +269,7 @@ sugit(すぎっと) / X:@sugitlab
 
 <!-- _class: subtitle puru happy -->
 
-# ワクワクさん と 所ジョージ に</br> を目指しています
+# ワクワクさん と 所ジョージさん </br> みたいになりたい
 
 ---
 
