@@ -1,9 +1,9 @@
 ---
 marp: true
 paginate: true
-title: 'TechTrain Theme Template'
+title: 'TechTrain Theme'
 image: 'https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/ogps/techtrain-theme.png'
-date: '2025-01-01'
+date: '2025-03-01'
 theme: techtrain
 hide: true
 ---
@@ -16,7 +16,6 @@ hide: true
 ---
 
 # Introduction
-## Title 
 
 This slide demonstrates the TechTrain theme that matches your design requirements.
 
@@ -27,13 +26,12 @@ This slide demonstrates the TechTrain theme that matches your design requirement
 
 ---
 
-# Layout 
-## Two-Column Layout
+# Two-Column Layout
 
 <div class="columns">
 <div>
 
-### Left Column
+## Left Column
 - Item 1
 - Item 2
 - Item 3
@@ -41,7 +39,7 @@ This slide demonstrates the TechTrain theme that matches your design requirement
 </div>
 <div>
 
-### Right Column
+## Right Column
 ```javascript
 function hello() {
   console.log("Hello, TechTrain!");
@@ -61,8 +59,6 @@ function hello() {
 
 # Code Examples
 
-## Code 
-
 ```python
 def analyze_data(dataset):
     """
@@ -79,8 +75,18 @@ def analyze_data(dataset):
 
 ---
 
+<!-- _class: dark -->
+
+# Dark Slide Variant
+
+This slide uses the dark variant of the theme for emphasis.
+
+> Important information can be highlighted in blockquotes
+
+---
+
 # Tables and Lists
-## TechTrain
+
 | Feature | Description |
 |---------|-------------|
 | Responsive | Works on all devices |
@@ -94,7 +100,6 @@ def analyze_data(dataset):
 ---
 
 # How to Use This Theme
-## Usage
 
 1. Save the CSS file as `techtrain.css`
 2. Include it in your Marp configuration
@@ -118,17 +123,16 @@ def analyze_data(dataset):
 ---
 
 <!-- _class: subtitle riku stand -->
-
 # RIKU
 
-<!-- options: ask/happy/sad/salute/smile/stand -->
+options: ask/happy/sad/salute/smile/stand
 
 ---
 
-<!--- _class: subtitle puru salute -->
+<!-- _class: subtitle puru salute -->
 # PURU
 
-<!--- options: happy/lookat/sad/salute/smile/think --->
+options: happy/lookat/sad/salute/smile/think
 
 ---
 
