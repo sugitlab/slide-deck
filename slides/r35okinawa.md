@@ -77,9 +77,9 @@ sugit(すぎっと) / X:@sugitlab
 
 # エンジニアタイプ診断
 ぜひやってみてください
-<div style="display: flex;">
-<img src="./assets/engineer-type-diagnosis.png" width="648px" />
+<div class="columns-2">
 <img src="./assets/qr-type-diag.png" height="240px" width="240px" />
+<img src="./assets/engineer-type-diagnosis.png" width="684px" />
 </div>
 
 ---
