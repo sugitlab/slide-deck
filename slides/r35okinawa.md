@@ -75,6 +75,15 @@ sugit(すぎっと) / X:@sugitlab
 
 ---
 
+# エンジニアタイプ診断
+ぜひやってみてください
+<div style="display: flex;">
+<img src="./assets/engineer-type-diagnosis.png" width="648px" />
+<img src="./assets/qr-type-diag.png" height="240px" width="240px" />
+</div>
+
+---
+
 <!-- _class: subtitle riku smile -->
 # キャリアの振り返りから
 
