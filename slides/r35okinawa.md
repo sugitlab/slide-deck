@@ -235,7 +235,7 @@ sugit(すぎっと) / X:@sugitlab
 
 <div style="display:flex;">
 <img src="https://assets.st-note.com/production/uploads/images/170139586/rectangle_large_type_2_29e87f0d0ab852c10c7bb13e14f56ca7.png" width="720px"/>
-<img src="./assets/note-qr.png" width="240px"/>
+<img src="./assets/note-qr.png" width="240px" height="240px"/>
 </div>
 
 
