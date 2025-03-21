@@ -218,15 +218,26 @@ sugit(すぎっと) / X:@sugitlab
 - マーケティングをかじってみたり
 - それより先にすべきことは **「ヒトを知る」** ことだと思います
 
+--- 
+
+<!-- _class: subtitle riku salute -->
+# タイトル回収！
+
 ---
 
 <!-- _class: subtitle -->
 <p class="message">「意思決定ができる」ではなく、</br>「みんなの意思決定を事業成長に収束させる」こと</br>これこそがPMの真の役割だと思います</p>
 
---- 
+---
 
-<!-- _class: subtitle riku salute -->
-# タイトル回収！
+<!-- _class: subtitle -->
+## このあたりの話はこちらの note に少しだけ書いています
+
+<div style="display:flex;">
+<img src="https://assets.st-note.com/production/uploads/images/170139586/rectangle_large_type_2_29e87f0d0ab852c10c7bb13e14f56ca7.png" width="720px"/>
+<img src="./assets/note-qr.png" width="240px"/>
+</div>
+
 
 ---
 
