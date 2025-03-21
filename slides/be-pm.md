@@ -1,8 +1,8 @@
 ---
 marp: true
 favicon: 'https://avatars.githubusercontent.com/u/26006414'
-title: 'R35. Meetup in OKINAWA'
-image: 'https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/ogps/r35_oka.png'
+title: 'PMはいいぞ'
+image: 'https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/ogps/be-pm.png'
 date: '2025-03-21'
 theme: techtrain
 hide: true
@@ -10,16 +10,13 @@ hide: true
 
 <!-- _class: title -->
 # PMはいいぞ
-### 品質第一の業界とスピード第一の業界の経験から見えてきた、PMのキャリア
 
-
-R35. Meetup in OKINAWA | 2025/3/21
 @sugit
 
 ---
 
 <!-- _class: subtitle puru salute -->
-# はいさーい
+# こんにちは
 
 ---
 

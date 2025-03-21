@@ -2,7 +2,7 @@
 marp: true
 favicon: 'https://avatars.githubusercontent.com/u/26006414'
 title: 'オーナーになろう'
-image: 'https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/ogps/draft.png'
+image: 'https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/ogps/be-owner.png'
 date: '2025-03-21'
 theme: techtrain
 hide: true
@@ -11,13 +11,12 @@ hide: true
 <!-- _class: title -->
 # オーナーになろう
 
-いつか使えるかもバックアップ
 @sugit
 
 ---
 
 <!-- _class: subtitle puru salute -->
-# はいさーい
+# こんにちは
 
 ---
 
