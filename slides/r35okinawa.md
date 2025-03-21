@@ -227,6 +227,10 @@ sugit(すぎっと) / X:@sugitlab
 - マーケティングをかじってみたり
 - それより先にすべきことは **「ヒトを知る」** ことだと思います
 
+<div class="puru-bubble smile">
+<p>みんなの Gain / Pain はどこにあるのだろう？を観察し、話し、理解することが大切だよ</p>
+</div>
+
 --- 
 
 <!-- _class: subtitle riku salute -->
