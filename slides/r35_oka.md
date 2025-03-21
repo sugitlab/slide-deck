@@ -5,6 +5,7 @@ title: 'R35. Meetup in OKINAWA'
 image: 'https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/ogps/r35_oka.png'
 date: '2025-03-21'
 theme: techtrain
+hide: true
 ---
 
 <!-- _class: title -->
@@ -82,7 +83,7 @@ sugit(すぎっと) / X:@sugitlab
 ---
 
 <!-- _class: subtitle riku happy -->
-# みんな、PMになりませんか？
+# PMになりませんか？
 
 ---
 
@@ -243,9 +244,6 @@ sugit(すぎっと) / X:@sugitlab
 
 1. みんなの意思決定のGainとPainを意識する
 1. 事業の向かう方向に沿ってみんなの視点を少しだけずらしてみる
-
-このとき、自身の得意スキル領域が無いとあまり説得力がでません。
-ひとつは武器を持つと良いと思います。
 
 ---
 

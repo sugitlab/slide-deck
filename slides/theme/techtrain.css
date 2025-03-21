@@ -619,6 +619,18 @@ section.puru.peek h1::after {
   background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_peek.png?raw=true');
 }
 
+section.puru.one h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_1.png?raw=true');
+}
+
+section.puru.two h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_2.png?raw=true');
+}
+
+section.puru.three h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_3.png?raw=true');
+}
+
 section.riku h1::after {
   content: '';
   width: 150px;
