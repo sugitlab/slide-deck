@@ -167,6 +167,29 @@ section {
   position: relative;
 }
 
+/* スライドのページ数 */
+section::after {
+  content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
+  font-size: 0.7em;
+}
+
+/* 発表会名 */
+header {
+  width: 100%;
+  position: absolute;
+  top: unset;
+  bottom: 20px;
+  left: 0;
+  text-align: center;
+  font-size: 0.7em;
+}
+
+/* 日付 */
+footer {
+  text-align: center;
+  font-size: 0.7em;
+}
+
 /* Heading styles */
 h1 {
   color: var(--color-text-description-light);
@@ -296,15 +319,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Footer styles - for page numbers */
-footer {
-  font-size: 0.8em;
-  color: #888;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-}
-
 /* Title slide */
 section.title {
   background-color: var(--color-bg-tertiary-dark);
@@ -340,6 +354,45 @@ section.title h2 {
 section.title h3 {
   color: var(--color-text-description-dark);
   font-size: 1.2em;
+}
+
+/* Title slide */
+section.title2 {
+  background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/pururiku_bg.png);
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+section.title2 h1 {
+  color: var(--color-text-light);
+  font-size: 2em;
+  border: none;
+}
+
+/* h1の擬似要素をリセット */
+section.title2 h1::after {
+  content: none;
+  width: 0;
+  height: 0;
+  background: none;
+  position: static;
+}
+
+section.title2 h2 {
+  color: var(--color-text-body-light);
+  font-size: 1.2em;
+}
+
+section.title2 h3 {
+  color: var(--color-text-description-light);
+  font-size: 1em;
+}
+
+section.title2 p {
+  font-size: 0.8em;
 }
 
 /* SubTitle slide */
@@ -410,6 +463,13 @@ section.summary h1::after {
   grid-template-columns: 1fr 2fr;
   gap: 20px;
 }
+
+.columns-3 {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+}
+
 
 /* Highlighted text */
 .highlight {
