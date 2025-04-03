@@ -169,7 +169,6 @@ section {
 
 /* スライドのページ数 */
 section::after {
-  content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
   font-size: 0.7em;
 }
 
@@ -356,7 +355,7 @@ section.title h3 {
   font-size: 1.2em;
 }
 
-/* Title slide */
+/* Title slide type-2 */
 section.title2 {
   background-image: url(https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/pururiku_bg.png);
   background-size: contain;
@@ -364,6 +363,7 @@ section.title2 {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  padding: 40px 80px;
 }
 
 section.title2 h1 {
@@ -517,12 +517,10 @@ section.dark code {
   border-radius: 10px;
   margin-left: 20px;
   flex-shrink: 0;
-
   /* 画像を背景として指定する場合 */
   background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_smile.png?raw=true');
   background-size: cover;
   background-position: center;
-
   /* プレースホルダーテキスト */
   display: flex;
   justify-content: center;
@@ -533,14 +531,14 @@ section.dark code {
 /* 吹き出し部分のスタイル */
 .puru-bubble p {
   position: relative;
-  background-color: var(--color-bg-secondary-light);
-  border-radius: 20px;
+  background-color: var(--color-tt-warning-10);
+  border-radius: 40px;
   padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   max-width: 960px;
   margin: 0 0 30px 0;
   font-size: 1em;
   line-height: 1.6;
+  right: 20px;
 }
 
 /* 吹き出しの三角形部分 */
@@ -548,12 +546,12 @@ section.dark code {
   content: '';
   position: absolute;
   right: -20px;
-  bottom: 30px;
+  bottom: 20px;
   width: 0;
   height: 0;
   border-top: 15px solid transparent;
-  border-left: 25px solid var(--color-bg-secondary-light);
-  border-bottom: 15px solid transparent;
+  border-left: 25px solid var(--color-tt-warning-10);
+  border-bottom: 10px solid transparent;
 }
 
 /* 吹き出しの種類 */
@@ -571,6 +569,10 @@ section.dark code {
 
 .puru-bubble.think::after {
   background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_think.png?raw=true');
+}
+
+.puru-bubble.lovely::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_lovely.png?raw=true');
 }
 
 /* --- RIKU --- */
@@ -607,14 +609,15 @@ section.dark code {
 /* 吹き出し部分のスタイル */
 .riku-bubble p {
   position: relative;
-  background-color: var(--color-bg-secondary-light);
-  border-radius: 20px;
+  background-color: var(--color-tt-focus-10);
+  border-radius: 40px;
   padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   max-width: 960px;
   margin: 0 0 30px 0;
   font-size: 1em;
   line-height: 1.6;
+  top: 20px;
+  left: 20px;
 }
 
 /* 吹き出しの三角形部分 */
@@ -626,8 +629,8 @@ section.dark code {
   width: 0;
   height: 0;
   border-top: 15px solid transparent;
-  border-right: 25px solid var(--color-bg-secondary-light);
-  border-bottom: 15px solid transparent;
+  border-right: 25px solid var(--color-tt-focus-10);
+  border-bottom: 10px solid transparent;
 }
 
 /* 吹き出しの種類 */
@@ -750,4 +753,133 @@ section.pururiku.peek h1::after {
 
 section.pururiku.bow h1::after {
   background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/pururiku_bow.png?raw=true');
+}
+
+/* --- 特殊要素 --- */
+
+/* --- LEFT --- */
+/* 吹き出し全体のスタイル */
+.left-bubble {
+  display: flex;
+  align-items: flex-end;
+  max-width: 960px;
+  margin: 30px auto;
+  position: relative;
+}
+
+/* キャラクター部分のスタイル */
+.left-bubble::after {
+  content: '';
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  margin-left: 20px;
+  flex-shrink: 0;
+  /* 画像を背景として指定する場合 */
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/assets/sugitlab.png?raw=true');
+  background-size: cover;
+  background-position: center;
+  /* プレースホルダーテキスト */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* 吹き出し部分のスタイル */
+.left-bubble p {
+  position: relative;
+  background-color: var(--color-tt-success-10);
+  border-radius: 40px;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 0 30px 0;
+  font-size: 1em;
+  line-height: 1.6;
+  right: 20px;
+}
+
+/* 吹き出しの三角形部分 */
+.left-bubble p::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  bottom: 20px;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-left: 25px solid var(--color-tt-success-10);
+  border-bottom: 10px solid transparent;
+}
+
+/* --- RIGHT --- */
+/* 吹き出し全体スタイル */
+.right-bubble {
+  display: flex;
+  align-items: flex-end;
+  max-width: 960px;
+  margin: 30px auto;
+  position: relative;
+}
+
+/* キャラクター部分のスタイル */
+.right-bubble::before {
+  content: '';
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  margin-left: 20px;
+  flex-shrink: 0;
+
+  /* 画像を背景として指定する場合 */
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/assets/sugitlab.png?raw=true');
+  background-size: cover;
+  background-position: center;
+
+  /* プレースホルダーテキスト */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* 吹き出し部分のスタイル */
+.right-bubble p {
+  position: relative;
+  background-color: var(--color-tt-caution-10);
+  border-radius: 40px;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 0 30px 0;
+  font-size: 1em;
+  line-height: 1.6;
+  top: 20px;
+  left: 20px;
+}
+
+/* 吹き出しの三角形部分 */
+.right-bubble p::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  bottom: 20px;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-right: 25px solid var(--color-tt-caution-10);
+  border-bottom: 10px solid transparent;
+}
+
+/* 吹き出しの種類 */
+.left-bubble.sugit::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/assets/profile.png?raw=true');
+}
+.right-bubble.sugit::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/assets/profile.png?raw=true');
+}
+.left-bubble.daichi::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/assets/daichi.png?raw=true');
+}
+.right-bubble.daichi::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/assets/daichi.png?raw=true');
 }
