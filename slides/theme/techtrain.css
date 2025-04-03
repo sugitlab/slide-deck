@@ -368,8 +368,14 @@ section.title2 {
 
 section.title2 h1 {
   color: var(--color-text-light);
+  text-align: center;
   font-size: 2em;
   border: none;
+}
+
+/* footer と header を隠す */
+section.title2 footer, header {
+  display: none;
 }
 
 /* h1の擬似要素をリセット */
