@@ -1,7 +1,7 @@
 ---
 marp: true
 favicon: 'https://avatars.githubusercontent.com/u/26006414'
-title: 'PdMとは？ スキル・マインドセット・トレンド最前線'
+title: 'TechBowl × D4V : デザインからプロダクトへ 〜PdMとして活かすデザイナーの強み'
 image: 'https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/ogps/design-to-product.png'
 date: '2025-04-15'
 theme: techtrain
