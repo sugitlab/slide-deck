@@ -283,7 +283,7 @@ table {
 
 th {
   background-color: var(--color-bg-primary-light);
-  color: var(--color-bg-primary-light);
+  color: var(--color-text-body-light);
   padding: 0.5em;
   text-align: left;
 }
@@ -505,7 +505,7 @@ section.dark code {
   display: flex;
   align-items: flex-end;
   max-width: 960px;
-  margin: 30px auto;
+  margin: 10px auto;
   position: relative;
 }
 
@@ -575,13 +575,77 @@ section.dark code {
   background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_lovely.png?raw=true');
 }
 
+.puru-bubble.angry::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_angry.png?raw=true');
+}
+
+.puru-bubble.calm::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_calm.png?raw=true');
+}
+
+.puru-bubble.circle::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_circle.png?raw=true');
+}
+
+.puru-bubble.gao::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_gao-.png?raw=true');
+}
+
+.puru-bubble.hooray::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_hooray.png?raw=true');
+}
+
+.puru-bubble.lookat::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_lookat.png?raw=true');
+}
+
+.puru-bubble.peek::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_peek.png?raw=true');
+}
+
+.puru-bubble.salute::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_salute.png?raw=true');
+}
+
+.puru-bubble.smug::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_smug face.png?raw=true');
+}
+
+.puru-bubble.stand::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_stand.png?raw=true');
+}
+
+.puru-bubble.surprised::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_surprised.png?raw=true');
+}
+
+.puru-bubble.wink::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_wink.png?raw=true');
+}
+
+.puru-bubble.one::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_1.png?raw=true');
+}
+
+.puru-bubble.two::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_2.png?raw=true');
+}
+
+.puru-bubble.three::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_3.png?raw=true');
+}
+
+.puru-bubble.four::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_4.png?raw=true');
+}
+
 /* --- RIKU --- */
 /* 吹き出し全体スタイル */
 .riku-bubble {
   display: flex;
   align-items: flex-end;
   max-width: 960px;
-  margin: 30px auto;
+  margin: 10px auto;
   position: relative;
 }
 
@@ -650,6 +714,74 @@ section.dark code {
   background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_happy.png?raw=true');
 }
 
+.riku-bubble.angry::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_angry.png?raw=true');
+}
+
+.riku-bubble.ask::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_ask.png?raw=true');
+}
+
+.riku-bubble.calm::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_calm.png?raw=true');
+}
+
+.riku-bubble.circle::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_circle.png?raw=true');
+}
+
+.riku-bubble.hooray::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_hooray.png?raw=true');
+}
+
+.riku-bubble.impressed::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_Impressed.png?raw=true');
+}
+
+.riku-bubble.lookat::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_lookat.png?raw=true');
+}
+
+.riku-bubble.peek::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_peek.png?raw=true');
+}
+
+.riku-bubble.smug::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_smug face.png?raw=true');
+}
+
+.riku-bubble.stand::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_stand.png?raw=true');
+}
+
+.riku-bubble.surprised::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_surprised.png?raw=true');
+}
+
+.riku-bubble.wink::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_wink.png?raw=true');
+}
+
+.riku-bubble.wonder::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_wonder.png?raw=true');
+}
+
+.riku-bubble.one::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_1.png?raw=true');
+}
+
+.riku-bubble.two::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_2.png?raw=true');
+}
+
+.riku-bubble.three::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_3.png?raw=true');
+}
+
+.riku-bubble.four::before {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_4.png?raw=true');
+}
+
 /* --- プルリクの強調要素 --- */
 section.puru h1::after {
   content: '';
@@ -701,6 +833,50 @@ section.puru.three h1::after {
   background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_3.png?raw=true');
 }
 
+section.puru.four h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_4.png?raw=true');
+}
+
+section.puru.angry h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_angry.png?raw=true');
+}
+
+section.puru.calm h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_calm.png?raw=true');
+}
+
+section.puru.circle h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_circle.png?raw=true');
+}
+
+section.puru.gao h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_gao-.png?raw=true');
+}
+
+section.puru.hooray h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_hooray.png?raw=true');
+}
+
+section.puru.lovely h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_lovely.png?raw=true');
+}
+
+section.puru.smug h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_smug face.png?raw=true');
+}
+
+section.puru.stand h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_stand.png?raw=true');
+}
+
+section.puru.surprised h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_surprised.png?raw=true');
+}
+
+section.puru.wink h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/puru_wink.png?raw=true');
+}
+
 section.riku h1::after {
   content: '';
   width: 150px;
@@ -734,8 +910,63 @@ section.riku.smile h1::after {
   background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_smile.png?raw=true');
 }
 
-section.riku.wink h1::after {
-  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_wink.png?raw=true');
+section.pururiku.peek h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/pururiku_peek.png?raw=true');
+}
+
+section.pururiku.bow h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/pururiku_bow.png?raw=true');
+}
+
+/* --- 特殊要素 --- */
+
+
+section.riku.circle h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_circle.png?raw=true');
+}
+
+section.riku.hooray h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_hooray.png?raw=true');
+}
+
+section.riku.impressed h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_Impressed.png?raw=true');
+}
+
+section.riku.lookat h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_lookat.png?raw=true');
+}
+
+section.riku.peek h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_peek.png?raw=true');
+}
+
+section.riku.smug h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_smug face.png?raw=true');
+}
+
+section.riku.surprised h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_surprised.png?raw=true');
+}
+
+section.riku.wonder h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_wonder.png?raw=true');
+}
+
+section.riku.one h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_1.png?raw=true');
+}
+
+section.riku.two h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_2.png?raw=true');
+}
+
+section.riku.three h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_3.png?raw=true');
+}
+
+section.riku.four h1::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/theme/puru-riku/riku_4.png?raw=true');
 }
 
 section.pururiku h1::after {
@@ -763,7 +994,7 @@ section.pururiku.bow h1::after {
   display: flex;
   align-items: flex-end;
   max-width: 960px;
-  margin: 30px auto;
+  margin: 10px auto;
   position: relative;
 }
 
@@ -793,7 +1024,7 @@ section.pururiku.bow h1::after {
   border-radius: 40px;
   padding: 20px;
   max-width: 960px;
-  margin: 0 0 30px 0;
+  margin: 0 0 10px 0;
   font-size: 1em;
   line-height: 1.6;
   right: 30px;
@@ -818,7 +1049,7 @@ section.pururiku.bow h1::after {
   display: flex;
   align-items: flex-end;
   max-width: 960px;
-  margin: 30px auto;
+  margin: 10px auto;
   position: relative;
 }
 
@@ -850,7 +1081,7 @@ section.pururiku.bow h1::after {
   border-radius: 40px;
   padding: 20px;
   max-width: 960px;
-  margin: 0 0 30px 0;
+  margin: 0 0 10px 0;
   font-size: 1em;
   line-height: 1.6;
   top: 20px;
@@ -872,6 +1103,10 @@ section.pururiku.bow h1::after {
 
 /* 吹き出しの種類 */
 .left-bubble.sugit::after {
+  background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/assets/profile.png?raw=true');
+}
+
+.left-bubble.sugimoto::after {
   background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/assets/profile.png?raw=true');
 }
 
