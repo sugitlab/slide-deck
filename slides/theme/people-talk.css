@@ -1,0 +1,135 @@
+/* @theme people-talk */
+
+/* 吹き出し全体のスタイル */
+.left-bubble {
+    display: flex;
+    align-items: flex-end;
+    max-width: 960px;
+    margin: 10px auto;
+    position: relative;
+}
+
+/* キャラクター部分のスタイル */
+.left-bubble::after {
+    content: '';
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    margin-left: 20px;
+    flex-shrink: 0;
+    /* 画像を背景として指定する場合 */
+    background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/assets/sugitlab.png?raw=true');
+    background-size: cover;
+    background-position: center;
+    /* プレースホルダーテキスト */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* 吹き出し部分のスタイル */
+.left-bubble p {
+    position: relative;
+    background-color: var(--color-bg-quaternary-light);
+    border-radius: 40px;
+    padding: 20px;
+    max-width: 960px;
+    margin: 0 0 10px 0;
+    font-size: 1em;
+    line-height: 1.6;
+    right: 30px;
+}
+
+/* 吹き出しの三角形部分 */
+.left-bubble p::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    bottom: 20px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-left: 25px solid var(--color-bg-quaternary-light);
+    border-bottom: 10px solid transparent;
+}
+
+/* --- RIGHT --- */
+/* 吹き出し全体スタイル */
+.right-bubble {
+    display: flex;
+    align-items: flex-end;
+    max-width: 960px;
+    margin: 10px auto;
+    position: relative;
+}
+
+/* キャラクター部分のスタイル */
+.right-bubble::before {
+    content: '';
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    margin-left: 20px;
+    flex-shrink: 0;
+
+    /* 画像を背景として指定する場合 */
+    background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/assets/sugitlab.png?raw=true');
+    background-size: cover;
+    background-position: center;
+
+    /* プレースホルダーテキスト */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* 吹き出し部分のスタイル */
+.right-bubble p {
+    position: relative;
+    background-color: var(--color-bg-quaternary-light);
+    border-radius: 40px;
+    padding: 20px;
+    max-width: 960px;
+    margin: 0 0 10px 0;
+    font-size: 1em;
+    line-height: 1.6;
+    top: 20px;
+    left: 30px;
+}
+
+/* 吹き出しの三角形部分 */
+.right-bubble p::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    bottom: 20px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-right: 25px solid var(--color-bg-quaternary-light);
+    border-bottom: 10px solid transparent;
+}
+
+
+/* 吹き出しの種類 */
+.left-bubble.sugit::after {
+    background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/assets/profile.png?raw=true');
+}
+
+.left-bubble.sugimoto::after {
+    background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/assets/profile.png?raw=true');
+}
+
+.left-bubble.daichi::after {
+    background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/assets/daichi.png?raw=true');
+}
+
+.right-bubble.sugit::before {
+    background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/assets/profile.png?raw=true');
+}
+
+.right-bubble.daichi::before {
+    background-image: url('https://github.com/sugitlab/slide-deck/blob/main/slides/assets/daichi.png?raw=true');
+}

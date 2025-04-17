@@ -6,10 +6,9 @@ image: 'https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/sl
 date: '2025-04-15'
 theme: techtrain
 footer: '「PdMとは？ スキル・マインドセット・トレンド最前線」 | デザインからプロダクトへ 〜PdMとして活かすデザイナーの強み'
-header: '2025-04-15'
 ---
 
-<!-- _class: title2 -->
+<!-- _class: title-pururiku -->
 # PdMとは？ </br> スキル・マインドセット・トレンド最前線
 ### TechBowl × D4V : デザインからプロダクトへ 〜PdMとして活かすデザイナーの強み
 2025-04-15
@@ -418,7 +417,7 @@ AIの発展は想像を容易く超えてきます。
 
 ---
 
-<!-- _class: subtitle puru salute -->
+<!-- _class: accent puru salute -->
 
 # そんな時代だからこそ、大切にしたいこと。
 
@@ -458,6 +457,6 @@ PdMとしての能力 + 強みのある専門性 で戦ってほしい
 
 ---
 
-<!-- _class: subtitle pururiku bow -->
+<!-- _class: accent pururiku bow -->
 # ご清聴ありがとうございました
 

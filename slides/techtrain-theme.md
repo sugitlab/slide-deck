@@ -6,32 +6,41 @@ image: 'https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/sl
 date: '2025-03-01'
 theme: techtrain
 hide: true
+footer: 'フッターラベルここに入ります'
 ---
 
 <!-- _class: title -->
 
-# TechTrain Presentation
-## Building Modern Applications
+# TechTrain テーマ
+## サブテーマがここに入ります
+### 補足テキストがここに入ります
 
 ---
 
-# Introduction
+<!-- _class: title-pururiku -->
 
-This slide demonstrates the TechTrain theme that matches your design requirements.
-
-* Customized header with gradient
-* TechTrain logo in the corner
-* Background watermark with your logo
-* Consistent typography and color scheme
+# TechTrain テーマ - プルリクカバー
+## こういうカバーも指定できます
+### かわいいね！！
 
 ---
 
-# Two-Column Layout
+# このスライドテーマについて
+## スライドのタイトルがここに入ります
+
+- 本文はこんな感じで
+- 箇条書きで書いてしまうのがおすすめ
+
+---
+
+# カラムレイアウト
+
+カラムレイアウトはdivなどを使って明示的にクラスを指定する必要があります。
 
 <div class="columns">
 <div>
 
-## Left Column
+## 左側
 - Item 1
 - Item 2
 - Item 3
@@ -39,7 +48,34 @@ This slide demonstrates the TechTrain theme that matches your design requirement
 </div>
 <div>
 
-## Right Column
+## 右側
+```javascript
+function hello() {
+  console.log("Hello, TechTrain!");
+}
+```
+
+</div>
+</div>
+
+---
+
+# カラムレイアウト part2
+
+クラス名を `columns-2` と `columns-3` にすれば比率が 1:2 や 1:3 になります
+
+<div class="columns-3">
+<div>
+
+## 左側
+- Item 1
+- Item 2
+- Item 3
+
+</div>
+<div>
+
+## 右側
 ```javascript
 function hello() {
   console.log("Hello, TechTrain!");
@@ -53,93 +89,65 @@ function hello() {
 
 <!-- _class: subtitle -->
 
-# Subtitle Slide
+# シンプルなサブタイトルスライド
+## サブタイトル
+### 補足テキストはここに入ります
 
 ---
 
 # Code Examples
 
-```python
-def analyze_data(dataset):
-    """
-    Analyze the provided dataset
-    """
-    results = []
-    
-    for data in dataset:
-        processed = data.transform()
-        results.append(processed)
-        
-    return results
+コードはシンプルにこんな感じ
+
+```javascript
+function hello() {
+  console.log("Hello, TechTrain!");
+}
 ```
 
 ---
 
-<!-- _class: dark -->
+# テーブル
 
-# Dark Slide Variant
+テーブルはこんな感じ。内容はGeminiが書いたので気にしないで。
 
-This slide uses the dark variant of the theme for emphasis.
+| 言語     | 特徴                                   | メリット                         | デメリット                         |
+| -------- | -------------------------------------- | -------------------------------- | --------------------------------- |
+| Python   | 読みやすい文法、豊富なライブラリ、汎用性が高い | 初心者向け、開発効率が高い           | 実行速度が比較的遅い               |
+| JavaScript | Webブラウザの標準言語、Node.jsでサーバーサイドも | フロントエンドからバックエンドまで対応可能 | ブラウザ環境に依存する部分がある       |
+| Java     | 堅牢性、オブジェクト指向、大規模開発向け     | 安定性が高い、実行速度が比較的速い     | 学習コストが高い、記述が冗長になりがち |
 
-> Important information can be highlighted in blockquotes
-
----
-
-# Tables and Lists
-
-| Feature | Description |
-|---------|-------------|
-| Responsive | Works on all devices |
-| Customizable | Easy to modify |
-| Professional | Clean, modern design |
-
-1. First ordered item
-2. Second ordered item
-3. Third ordered item
 
 ---
 
-# How to Use This Theme
+# PURU RIKU 吹き出し
 
-1. Save the CSS file as `techtrain.css`
-2. Include it in your Marp configuration
-3. Set `theme: techtrain` in your markdown frontmatter
-4. Replace logo placeholders with your actual logos:
-   - `path/to/your/techtrain-logo.png`
-   - `path/to/your/background-logo.png`
+## クラス名を変えればプルとリクの画像を切り替えられるよ
 
----
-
-# PURU RIKU Bubble
-
-<div class="puru-bubble">
+<div class="puru-bubble smile">
 <p>こんにちは！これは通常の吹き出しです。クラス一つで簡単に使えます。</p>
 </div>
 
-<div class="riku-bubble sad">
+<div class="riku-bubble surprised">
 <p>こんにちは！これは通常の吹き出しです。クラス一つで簡単に使えます。</p>
 </div>
 
----
-
-<!-- _class: subtitle riku stand -->
-# RIKU
-
-options: ask/happy/sad/salute/smile/stand
 
 ---
 
-<!-- _class: subtitle puru salute -->
-# PURU
-
-options: happy/lookat/sad/salute/smile/think
+<!-- _class: accent riku stand -->
+# RIKUをつかったアクセントページ
 
 ---
 
+<!-- _class: accent puru salute -->
+# PURUをつかったアクセントページ
 
-# Thank You!
+---
 
-## Contact Information
+# その他
 
-- `info@techtrain.example.com`
-- `www.techtrain-example.com`
+- <span class="highlight">ハイライト</span>テキスト
+- [リンク](./)テキスト
+- > 引用
+- <p class="message">強調メッセージ</p>

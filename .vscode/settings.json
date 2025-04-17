@@ -1,0 +1,9 @@
+{
+    "markdown.marp.themes": [
+        "./slides/theme/techtrain.css",
+        "./slides/theme/people-talk.css",
+        "./slides/theme/pururiku-talk.css",
+        "./slides/theme/pururiku.css"
+    ],
+    "markdown.marp.strictPathResolutionDuringExport": true,
+}
