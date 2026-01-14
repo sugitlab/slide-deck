@@ -3,7 +3,11 @@
         "./slides/theme/techtrain.css",
         "./slides/theme/people-talk.css",
         "./slides/theme/pururiku-talk.css",
-        "./slides/theme/pururiku.css"
+        "./slides/theme/pururiku.css",
+        "./slides/theme/techtrain2.css"
     ],
     "markdown.marp.strictPathResolutionDuringExport": true,
+    "accessibility.signals.lineHasInlineSuggestion": {
+        "sound": "off"
+    },
 }
