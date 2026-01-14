@@ -158,7 +158,6 @@ section {
   text-align: start;
   font-family: var(--font-family);
   background-color: var(--color-bg-primary-light);
-  background-image: url('https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/light_bg_element.png');
   background-position: right;
   background-size: contain;
   background-repeat: no-repeat;
@@ -169,7 +168,7 @@ section {
 
 /* スライドのページ数 */
 section::after {
-  font-size: 0.7em;
+  font-size: 0.5em;
 }
 
 /* 発表会名 */
@@ -197,20 +196,6 @@ h1 {
   padding-bottom: 8px;
   width: 100%;
   border-bottom: 1px solid var(--color-text-body-light);
-}
-
-/* ヘッダーロゴ */
-h1::after {
-  content: '';
-  width: 180px;
-  height: 48px;
-  position: absolute;
-  right: 20px;
-  top: 32px;
-  background-image: url('https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/logo.png');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 /* スライドタイトル */
@@ -320,9 +305,8 @@ a:hover {
 /* 表紙スライド */
 /* ---------- */
 section.title {
-  background-color: var(--color-bg-tertiary-dark);
   background-image: url('https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/character_title_bg.png');
-  color: var(--color-text-reverse-light);
+  color: var(--color-text-body-light);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -330,7 +314,7 @@ section.title {
 }
 
 section.title h1 {
-  color: var(--color-text-reverse-light);
+  color: var(--color-text-body-light);
   font-size: 2.5em;
   border: none;
 }
@@ -345,24 +329,72 @@ section.title h1::after {
 }
 
 section.title h2 {
-  color: var(--color-text-reverse-light);
+  color: var(--color-text-body-light);
   font-size: 1.5em;
 }
 
 section.title h3 {
-  color: var(--color-text-description-dark);
+  color: var(--color-text-body-light);
   font-size: 1.2em;
 }
 
 /* ------------ */
 /* カバースライド */
 /* ------------ */
+section.cover {
+  background-image: url('https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/character_cover_bg.png');
+  color: var(--color-text-body-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10%;
+}
 
+section.cover h1 {
+  color: var(--color-text-body-light);
+  font-size: 2em;
+  border: none;
+}
+
+section.body h2 {
+  color: var(--color-text-body-light);
+  font-size: 1.5em;
+}
+
+section.body h3 {
+  color: var(--color-text-body-light);
+  font-size: 1.2em;
+}
 
 /* ------------ */
 /* ボディスライド */
 /* ------------ */
+section.body {
+  background-image: url('https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/character_body_bg.png');
+  color: var(--color-text-body-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10%;
+}
 
+section.body h1 {
+  color: var(--color-text-body-light);
+  font-size: 2em;
+  border: none;
+}
+
+section.body h2 {
+  color: var(--color-text-body-light);
+  font-size: 1.5em;
+}
+
+section.body h3 {
+  color: var(--color-text-body-light);
+  font-size: 1.2em;
+}
 
 /* ------------ */
 /* 特殊レイアウト */

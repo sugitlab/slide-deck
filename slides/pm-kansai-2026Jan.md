@@ -6,6 +6,7 @@ image: 'https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/sl
 date: '2026-01-22'
 theme: techtrain2
 hide: true
+paginate: true
 ---
 
 <!-- _class: title -->
@@ -17,7 +18,15 @@ PM Kansai Meetup #1 | 2026-01-22
 
 ---
 
-<!-- _class: subtitle puru salute -->
+<!-- _class: cover -->
 # 本日のテーマ
-## プロダクトにAIを使った機能を入れるならどう進めるか
+## プロダクトにAIを組み込むならどう進めるか
 
+---
+
+<!-- class: body -->
+# test
+
+--- 
+
+# page2
