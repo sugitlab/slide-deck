@@ -12,8 +12,17 @@
 
 - デプロイはGitHubPages
 - スライド一覧ページの生成は`build`コマンド経由で`generate-index`をGitHubActionsで実行
-- OGP画像についてはGitHubActions対応が終わっていないので、ローカルで`generate-ogp`を実行し、生生成され画像ファイルをリポジトリにpushしてください
+- OGP画像についてはGitHubActions対応が終わっていないので、ローカルで`generate-ogp`を実行し、生成され画像ファイルをリポジトリにpushしてください
   - OGP画像をスライドに指定するには、各スライドのfrontmatterに`image`としてgithubusercontentのURLで設定すると簡単です
+  
+## およその手順
+
+- generate-ogpをする
+- githubにpushして、画像のurlを取得する
+- frontmatterにurlを設定する
+- githubにpushする
+- actionsでビルドが走る
+- 完了
 
 # アセット系の扱い
 
