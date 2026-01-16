@@ -256,7 +256,7 @@ pre {
   padding: 1em;
   border-radius: 5px;
   overflow: auto;
-  width:90%;
+  width: 90%;
   margin: 0 auto;
 
 }
@@ -394,6 +394,16 @@ section.body h2 {
 section.body h3 {
   color: var(--color-text-body-light);
   font-size: 1.2em;
+}
+
+/* ------------ */
+/* サービス紹介 */
+/* ------------ */
+section.service {
+  background-image: url('https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/character_service.png');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* ------------ */
