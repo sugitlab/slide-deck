@@ -223,13 +223,21 @@ h1 strong,
 h2 strong,
 h3 strong,
 p strong {
+  font-weight: bold;
+  color: var(--color-text-body-light);
+}
+
+h1 strong.red,
+h2 strong.red,
+h3 strong.red,
+p strong.red {
   color: var(--color-tt-caution-30);
 }
 
-h1 strong.weak,
-h2 strong.weak,
-h3 strong.weak,
-p strong.weak {
+h1 strong.blue,
+h2 strong.blue,
+h3 strong.blue,
+p strong.blue {
   color: var(--color-tt-focus-40);
 }
 

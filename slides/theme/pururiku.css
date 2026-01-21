@@ -1,34 +1,5 @@
 /* @theme pururiku */
 
-/* サブタイトルで使用すると便利 */
-
-section.accent {
-  background-image: url('https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/theme/light_bg_element.png');
-  background-size: contain;
-  background-position: right;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-section.accent h1 {
-  font-size: 2em;
-  border: none;
-  text-align: center;
-  color: var(--color-text-body-light);
-}
-
-/* h1の擬似要素をリセット */
-section.accent h1::after {
-  content: none;
-  width: 0;
-  height: 0;
-  background: none;
-  position: static;
-}
-
 /* --- PURUの強調要素 --- */
 section.puru h1::after {
   content: '';

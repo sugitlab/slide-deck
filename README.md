@@ -27,3 +27,20 @@
 # アセット系の扱い
 
 - とりあえずpublic運用前提で、アセットはリポジトリにpushし、githubusercontentのURLで指定するようにしています
+
+# PDF 
+
+こんな感じ 
+
+ファイル名は適宜修正してね
+
+```zsh
+pnpm exec marp slides/pm-kansai-2026Jan.md \
+  --pdf \
+  --html \
+  --allow-local-files \
+  --theme-set slides/theme/techtrain2.css \
+  --theme-set slides/theme/pururiku.css \
+  --theme-set slides/theme/pururiku-talk.css \
+  --output dist/pm-kansai-2026Jan.pdf
+```
