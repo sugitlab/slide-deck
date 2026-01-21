@@ -6,7 +6,6 @@ image: 'https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/sl
 date: '2026-01-22'
 theme: techtrain2
 footer: "PM Kansai Meetup #1 - 2026-01-22"
-hide: true
 paginate: true
 ---
 
