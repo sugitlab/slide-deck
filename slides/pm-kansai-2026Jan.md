@@ -5,6 +5,7 @@ title: 'PM Kansai Meetup #1 - 2026 Jan.'
 image: 'https://raw.githubusercontent.com/sugitlab/slide-deck/refs/heads/main/slides/ogps/pm-kansai-2026Jan.png'
 date: '2026-01-22'
 theme: techtrain2
+footer: "pm kansai meetup"
 hide: true
 paginate: true
 ---
@@ -15,12 +16,6 @@ paginate: true
 PM Kansai Meetup #1 | 2026-01-22
 
 @sugit
-
----
-
-<!-- _class: cover -->
-# 本日のテーマ
-## プロダクトにAIを組み込むならどう進めるか
 
 ---
 
@@ -46,6 +41,12 @@ PM Kansai Meetup #1 | 2026-01-22
 ---
 
 ## 私はClaudeの言いなりなので、地に足をついた話をしようと思います。
+
+---
+
+<!-- _class: cover -->
+# 本日のテーマ
+## プロダクトにAIを組み込むならどう進めるか
 
 --- 
 
@@ -121,7 +122,7 @@ X: @sugitlab
 
 <!-- _class: cover -->
 
-# ① 確率的なふるまいに向き合う
+# 確率的なふるまいに向き合う
 
 ---
 
@@ -146,7 +147,24 @@ X: @sugitlab
 
 ---
 
-# 確率論と決定論って具体的にどういうこと？
+これは私の経験とお気持ちですが、、、
+
+## 確率的な挙動に向き合うプロジェクトって、<br />  **めちゃくちゃ難しい**
+
+
+機械学習を扱うプロジェクトってずっとこの難しさがあるなぁって思ってます。
+
+モデルの性能が飛躍的に向上していますが、この難しさは続きそうだなぁと思っています。
+
+---
+
+<div class="riku-bubble surprised">
+<p>ねぇねぇ、そもそもさ、<strong class="weak">確率論と決定論</strong>ってよくわかんないんだけど</p>
+</div>
+
+<div class="puru-bubble smile">
+<p>そうだよね、じゃあ具体例を考えてみよっか</p>
+</div>
 
 ---
 <!-- _class: body puru salute -->
@@ -165,9 +183,57 @@ X: @sugitlab
 
 ---
 
+<div class="riku-bubble surprised">
+<p>レコメンドとかだと、確率論的におすすめ選定して、そのあとは決定論的にうごくってこと？
+</div>
+
+<div class="puru-bubble happy">
+<p>そうそう、つまり、<br/> システムの中に<strong>確率論的なパーツが混ざってる</strong> んだね！</p>
+</div>
+
+<div class="riku-bubble impressed">
+<p>なにそれ... 意味わかんないよ</p>
+</div>
+
+---
+
+<!-- _class: body riku wonder -->
+# 確率論的だと、どう困るんだろう？
+
+---
+
+## 1. 要件定義に困る
+## 2. チームで認識が揃わなくて困る
+## 3. トラブルへの備えがわからなくて困る
+
+
+---
+
+## 1. 要件定義に困る
+
+- YES/NO で書きづらい
+- 正解の定義が難しい
+- プロンプトは仕様書の持ち物？コードベースの持ち物？
+
+---
+
+## 2. チームで認識が揃わなくて困る
+- PM、エンジニア、QAで "合格" が揃わない
+- 合格基準が人に依存
+
+---
+
+### 3. トラブルへの備えがわからなくて困る
+
+- ユーザーからのこんな結果が出ているよ、に対して何をしよう
+  - 再現できない
+
+
+---
+
 <!-- _class: cover -->
 
-# ② レイヤー設計が大事
+# ② 確率論
 
 ---
 
