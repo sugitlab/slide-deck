@@ -104,7 +104,7 @@ const visibleSlides = slideFiles.filter(slide => !slide.hide);
 
 // Generate slides HTML content
 const slidesContent = visibleSlides.map(slide => `
-    <a href="./${slide.htmlFile}" class="card">
+    <a href="./${slide.htmlFile}" class="card fade-in">
       <img src="${slide.image}" 
            alt="Cover for ${slide.title}" 
            class="card-image"
