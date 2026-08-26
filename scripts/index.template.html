@@ -134,11 +134,30 @@
       box-shadow: var(--shadow-md);
     }
 
+    .card-media {
+      position: relative;
+    }
+
     .card-image {
       width: 100%;
       aspect-ratio: 16/9;
       object-fit: cover;
       display: block;
+    }
+
+    .card-source {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      background: rgba(13, 13, 13, 0.72);
+      padding: 4px 8px;
+      border-radius: 6px;
+      backdrop-filter: blur(4px);
     }
 
     .card-content {
